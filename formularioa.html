@@ -14,11 +14,46 @@
       <li><a href="irudiak.html">Irudiak</a></li>
     </ul>
   </nav>
+</head>
+<body>
   <div class="formularioa">
-    <form method="post">
-      <div class="izena">
-        <label for="name">Izen osoa:</label>
-        <input type="text" id="name" name="name" placeholder="Sartu zure izen osoa">
-      </div>
+      <label for="izena">Izen osoa:</label>
+      <input type="text" id="izena" name="izena" value="Pepe">
+
+      <label for="emaila">Emaila:</label>
+      <input type="email" id="emaila" name="emaila" placeholder="Sartu zure posta elektronikoa" class="error">
+      <button type="button" onclick="emailkonprobatu()">Onartu</button>
+      <p id="emaila_mesua"></p>
+
+      <label>Generoa:</label><br>
+      <input type="radio" id="gizonezkoa" name="generoa">
+      <label for="gizonezkoa">Gizonezkoa</label>
+      <input type="radio" id="emakumezkoa" name="generoa">
+      <label for="emakumezkoa">Emakumezkoa</label>
+      <input type="radio" id="beste" name="generoa">
+      <label for="beste">Beste bat</label>
+
+      <label for="estatua">Estatua:</label>
+      <select id="estatua">
+          <option>Aukeratu zure herrialdea</option>
+      </select>
+      <button>Bidali</button>
+      <script>
+        function emailkonprobatu() {
+            const emailField = document.getElementById('emaila');
+            const emailMessage = document.getElementById('emaila_mesua');
+            const email = emailField.value;
+            if (email.includes('@')) {
+                emailField.style.border = '1px solid green';
+                emailMessage.textContent = `"${email}" erabilgarri dago.`;
+                emailMessage.className = 'success';
+            } else {
+                emailField.style.border = '1px solid red';
+                emailMessage.textContent = `"${email}" ez dago erabilgarri.`;
+                emailMessage.className = 'error';
+            }
+        }
+    </script>
+  </div>
 </body>
 </html>
