@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irudiak</title>
+    <link rel="stylesheet" href="irudiak.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="pertsonalizatzea.html">Pertsonalizatzea</a></li>
+          <li><a href="formularioa.html">formularioa</a></li>
+          <li><a href="irudiak.html">Irudiak</a></li>
+        </ul>
+      </nav>
+      <button onclick="changeImage()">Cambiar Imagen</button>
+      <div>
+        <img id="mainImage" src="irudiak/JavaScript-logo.png" alt="Imagen" >
+      </div>
+      <div>
+        <img id="autoImage" src="image1.jpg" alt="Imagen" style="width:300px;height:200px;">
+      </div>
+
+      <script>
+        const images = ["irudiak/image1.jpg", "irudiak/image2.jpg", "irudiak/image3.jpg"];
+        let currentIndex = 0;
+
+        function changeImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById("mainImage").src = images[currentIndex];
+        }
+
+        function autoChangeImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById("autoImage").src = images[currentIndex];
+        }
+
+        setInterval(autoChangeImage, 2000);
+      </script>
+</body>
+</html>

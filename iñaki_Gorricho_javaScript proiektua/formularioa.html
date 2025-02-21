@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularioa</title>
+  <link rel="stylesheet" href="formularioa.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="pertsonalizatzea.html">Pertsonalizatzea</a></li>
+      <li><a href="formularioa.html">formularioa</a></li>
+      <li><a href="irudiak.html">Irudiak</a></li>
+    </ul>
+  </nav>
+</head>
+<body>
+  <div class="formularioa">
+      <label for="izena">Izen osoa:</label>
+      <input type="text" id="izena" name="izena">
+
+      <label for="emaila">Emaila:</label>
+      <input type="email" id="emaila" name="emaila" placeholder="Sartu zure posta elektronikoa" class="error">
+      <button type="button" onclick="emailkonprobatu()">Onartu</button>
+      <p id="emaila_mesua"></p>
+
+      <label>Generoa:</label> 
+      <input type="radio" id="gizonezkoa" name="generoa">
+      <label for="gizonezkoa">Gizonezkoa</label> 
+      <input type="radio" id="emakumezkoa" name="generoa">
+      <label for="emakumezkoa">Emakumezkoa</label>  
+      <input type="radio" id="beste" name="generoa">
+      <label for="beste">Beste bat</label>
+
+      <label for="estatua">Estatua:</label>
+      <select id="estatua">
+          <option>Aukeratu zure herrialdea</option>
+          <option>Euskal Herria</option>
+          <option>Erresuma Batua</option>
+          <option>Frantzia</option>
+          <option>Australia</option>
+      </select>
+      <button>Bidali</button>
+      <script>
+        function emailkonprobatu() {
+        const emailField = document.getElementById('emaila');
+        const emailMessage = document.getElementById('emaila_mesua');
+        const email = emailField.value;
+        if (email.includes('@')) {
+            emailMessage.textContent = `"${email}" erabilgarri dago.`;
+            emailMessage.className = 'success';
+            emailMessage.style.color = 'green';
+        } else {
+            emailMessage.textContent = `"${email}" ez dago erabilgarri.`;
+            emailMessage.className = 'error';
+            emailMessage.style.color = 'red';
+        }
+        }
+        </script>
+  </div>
+</body>
+</html>
