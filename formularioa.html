@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formularioa</title>
-  <link rel="stylesheet" href="css/formularioa.css">
+  <link rel="stylesheet" href="formularioa.css">
 </head>
 <body>
   <nav>
@@ -18,18 +18,18 @@
 <body>
   <div class="formularioa">
       <label for="izena">Izen osoa:</label>
-      <input type="text" id="izena" name="izena" value="Pepe">
+      <input type="text" id="izena" name="izena">
 
       <label for="emaila">Emaila:</label>
       <input type="email" id="emaila" name="emaila" placeholder="Sartu zure posta elektronikoa" class="error">
       <button type="button" onclick="emailkonprobatu()">Onartu</button>
       <p id="emaila_mesua"></p>
 
-      <label>Generoa:</label><br>
+      <label>Generoa:</label> 
       <input type="radio" id="gizonezkoa" name="generoa">
-      <label for="gizonezkoa">Gizonezkoa</label>
+      <label for="gizonezkoa">Gizonezkoa</label> 
       <input type="radio" id="emakumezkoa" name="generoa">
-      <label for="emakumezkoa">Emakumezkoa</label>
+      <label for="emakumezkoa">Emakumezkoa</label>  
       <input type="radio" id="beste" name="generoa">
       <label for="beste">Beste bat</label>
 
@@ -40,20 +40,20 @@
       <button>Bidali</button>
       <script>
         function emailkonprobatu() {
-            const emailField = document.getElementById('emaila');
-            const emailMessage = document.getElementById('emaila_mesua');
-            const email = emailField.value;
-            if (email.includes('@')) {
-                emailField.style.border = '1px solid green';
-                emailMessage.textContent = `"${email}" erabilgarri dago.`;
-                emailMessage.className = 'success';
-            } else {
-                emailField.style.border = '1px solid red';
-                emailMessage.textContent = `"${email}" ez dago erabilgarri.`;
-                emailMessage.className = 'error';
-            }
+        const emailField = document.getElementById('emaila');
+        const emailMessage = document.getElementById('emaila_mesua');
+        const email = emailField.value;
+        if (email.includes('@')) {
+            emailMessage.textContent = `"${email}" erabilgarri dago.`;
+            emailMessage.className = 'success';
+            emailMessage.style.color = 'green';
+        } else {
+            emailMessage.textContent = `"${email}" ez dago erabilgarri.`;
+            emailMessage.className = 'error';
+            emailMessage.style.color = 'red';
         }
-    </script>
+        }
+        </script>
   </div>
 </body>
 </html>
