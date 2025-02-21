@@ -23,7 +23,7 @@
       <label for="emaila">Emaila:</label>
       <input type="email" id="emaila" name="emaila" placeholder="Sartu zure posta elektronikoa" class="error">
       <button type="button" onclick="emailkonprobatu()">Onartu</button>
-      <p id="emaila_mesua"></p>
+      <p id="emaila_mezua"></p>
 
       <label>Generoa:</label> 
       <input type="radio" id="gizonezkoa" name="generoa">
@@ -35,7 +35,6 @@
 
       <label for="estatua">Estatua:</label>
       <select id="estatua">
-          <option>Aukeratu zure herrialdea</option>
           <option>Euskal Herria</option>
           <option>Erresuma Batua</option>
           <option>Frantzia</option>
@@ -45,7 +44,7 @@
       <script>
         function emailkonprobatu() {
         const emailField = document.getElementById('emaila');
-        const emailMessage = document.getElementById('emaila_mesua');
+        const emailMessage = document.getElementById('emaila_mezua');
         const email = emailField.value;
         if (email.includes('@')) {
             emailMessage.textContent = `"${email}" erabilgarri dago.`;
