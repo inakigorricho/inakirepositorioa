@@ -7,21 +7,72 @@
     <link rel="stylesheet" href="pertsonalizatzea.css">
 </head>
 <body>
-  <header>
-    <nav>
-        <ul>
-            <li><a href="pertsonalizatzea.html">Pertsonalizatzailea</a></li>
-            <li><a href="formularioa.html">Formularioa</a></li>
-            <li><a href="irudiak.html">Irudiak</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="navbar">
+        <a href="pertsonalizatzea.html">Personalizatzailea</a>
+        <a href="formularioa.html">Formularioa</a>
+        <a href="irudiak.html">Irudiak</a>
+    </div>
+    <div class="container" id="mainContainer">
+        <h1 id="title">Ongi etorria personalizatzaileara</h1>
+        <p id="paragraph">Paragrafo honen estiloa alda dezakezu.</p>
+        <p id="clickText">Klik egin personalizatzeko.</p>
+        
+        <div class="customizer">
+            <div>Atzeko kolorea</div>
+            <div class="color-box">
+                <div class="red" onclick="changeBackground('red')"></div>
+                <div class="green" onclick="changeBackground('green')"></div>
+                <div class="blue" onclick="changeBackground('blue')"></div>
+                <div class="black" onclick="changeBackground('black')"></div>
+            </div>
+            <div>Aldatu letrak</div>
+            <div class="color-box">
+                <div class="red" onclick="changeTextColor('red')"></div>
+                <div class="green" onclick="changeTextColor('green')"></div>
+                <div class="blue" onclick="changeTextColor('blue')"></div>
+                <div class="black" onclick="changeTextColor('black')"></div>
+            </div>
+            <div>Aldatu letra mota</div>
+            <div class="size-box">
+                <div onclick="changeFont('Arial')">A</div>
+                <div onclick="changeFont('Times New Roman')">T</div>
+                <div onclick="changeFont('Courier New')">C</div>
+                <div onclick="changeFont('Fantasy')">F</div>
+                <div onclick="changeFont('Monospace')">M</div>
+            </div>
+            <div>Aldatu letra tamaina</div>
+            <div class="font-size-box">
+                <div onclick="changeFontSize('10px')">XS</div>
+                <div onclick="changeFontSize('14px')">S</div>
+                <div onclick="changeFontSize('18px')">M</div>
+                <div onclick="changeFontSize('22px')">L</div>
+                <div onclick="changeFontSize('26px')">XL</div>
+            </div>
+        </div>
+    </div>
 
-<main>
-    <h1>Ongi etorria pertsonalizatzailea</h1>
-    <p>Paragrafo honen estiloa alda dezakezu.</p>
-    <p>Klik egin pertsonalizatzeko.</p>
-    <div></div>
-</main>
+    <script>
+        function changeBackground(color) {
+            document.getElementById('mainContainer').style.backgroundColor = color;
+        }
+
+        function changeTextColor(color) {
+            document.getElementById('title').style.color = color;
+            document.getElementById('paragraph').style.color = color;
+            document.getElementById('clickText').style.color = color;
+        }
+
+        function changeFont(font) {
+            document.getElementById('title').style.fontFamily = font;
+            document.getElementById('paragraph').style.fontFamily = font;
+            document.getElementById('clickText').style.fontFamily = font;
+        }
+
+        function changeFontSize(size) {
+            document.getElementById('title').style.fontSize = size;
+            document.getElementById('paragraph').style.fontSize = size;
+            document.getElementById('clickText').style.fontSize = size;
+        }
+    </script>
 </body>
 </html>
