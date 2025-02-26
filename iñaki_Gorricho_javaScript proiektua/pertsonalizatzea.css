@@ -2,43 +2,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ddd;
+    background-color: white; 
 }
-.navbar {
-    background-color: #333;
-    padding: 10px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
-.container {
+.kontainerra {
     padding: 20px;
-    background-color: #ccc;
+    background-color: white;
     height: 100vh;
 }
-h1 {
-    color: green;
-}
-p {
-    color: green;
-}
-.customizer {
-    background: white;
+
+.kustomizazioa {
+    background: rgb(248, 247, 247);
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
 }
-.color-box, .size-box, .font-size-box {
+.kolorea, .tamaina, .formatua {
     display: flex;
     gap: 5px;
     margin-top: 5px;
 }
-.color-box div, .size-box div, .font-size-box div {
+.kolorea div, .tamaina div, .formatua div {
     width: 20px;
     height: 20px;
     border: 1px solid black;
@@ -47,7 +30,31 @@ p {
     align-items: center;
     justify-content: center;
 }
-.color-box .red { background: red; }
-.color-box .green { background: green; }
-.color-box .blue { background: blue; }
-.color-box .black { background: black; }
+.kolorea .red { background: red; }
+.kolorea .green { background: green; }
+.kolorea .blue { background: blue; }
+.kolorea .black { background: black; }
+.kolorea .white { background: white; }
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }

@@ -7,71 +7,72 @@
     <link rel="stylesheet" href="pertsonalizatzea.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="pertsonalizatzea.html">Personalizatzailea</a>
-        <a href="formularioa.html">Formularioa</a>
-        <a href="irudiak.html">Irudiak</a>
-    </div>
-    <div class="container" id="mainContainer">
-        <h1 id="title">Ongi etorria personalizatzaileara</h1>
-        <p id="paragraph">Paragrafo honen estiloa alda dezakezu.</p>
-        <p id="clickText">Klik egin personalizatzeko.</p>
+    <nav>
+        <ul>
+            <li><a href="pertsonalizatzea.html">Pertsonalizatzea</a></li>
+            <li><a href="formularioa.html">Formularioa</a></li>
+            <li><a href="irudiak.html">Irudiak</a></li>
+        </ul>
+    </nav>
+    <div class="kontainerra" id="kontainerra-orokorra">
+        <h1 id="tituloa">Ongi etorria personalizatzaileara</h1>
+        <p id="paragrafroa">Paragrafo honen estiloa alda dezakezu.</p>
+        <p id="textuaklikatu">Klik egin personalizatzeko.</p>
         
-        <div class="customizer">
+        <div class="kustomizazioa">
             <div>Atzeko kolorea</div>
-            <div class="color-box">
-                <div class="red" onclick="changeBackground('red')"></div>
-                <div class="green" onclick="changeBackground('green')"></div>
-                <div class="blue" onclick="changeBackground('blue')"></div>
-                <div class="black" onclick="changeBackground('black')"></div>
+            <div class="kolorea">
+                <div class="red" onclick="aldatufondoa('red')"></div>
+                <div class="green" onclick="aldatufondoa('green')"></div>
+                <div class="blue" onclick="aldatufondoa('blue')"></div>
+                <div class="black" onclick="aldatufondoa('black')"></div>
             </div>
             <div>Aldatu letrak</div>
-            <div class="color-box">
-                <div class="red" onclick="changeTextColor('red')"></div>
-                <div class="green" onclick="changeTextColor('green')"></div>
-                <div class="blue" onclick="changeTextColor('blue')"></div>
-                <div class="black" onclick="changeTextColor('black')"></div>
+            <div class="kolorea">
+                <div class="red" onclick="aldatutextuarenkolorea('red')"></div>
+                <div class="green" onclick="aldatutextuarenkolorea('green')"></div>
+                <div class="blue" onclick="aldatutextuarenkolorea('blue')"></div>
+                <div class="black" onclick="aldatutextuarenkolorea('black')"></div>
+                <div class="white" onclick="aldatutextuarenkolorea('white')"></div>
             </div>
-            <div>Aldatu letra mota</div>
-            <div class="size-box">
-                <div onclick="changeFont('Arial')">A</div>
-                <div onclick="changeFont('Times New Roman')">T</div>
-                <div onclick="changeFont('Courier New')">C</div>
-                <div onclick="changeFont('Fantasy')">F</div>
-                <div onclick="changeFont('Monospace')">M</div>
+            <div class="tamaina">
+                <div onclick="aldatutextuarentamaina('10px')">XS</div>
+                <div onclick="aldatutextuarentamaina('14px')">S</div>
+                <div onclick="aldatutextuarentamaina('18px')">M</div>
+                <div onclick="aldatutextuarentamaina('22px')">L</div>
+                <div onclick="aldatutextuarentamaina('26px')">XL</div>
             </div>
-            <div>Aldatu letra tamaina</div>
-            <div class="font-size-box">
-                <div onclick="changeFontSize('10px')">XS</div>
-                <div onclick="changeFontSize('14px')">S</div>
-                <div onclick="changeFontSize('18px')">M</div>
-                <div onclick="changeFontSize('22px')">L</div>
-                <div onclick="changeFontSize('26px')">XL</div>
+            <div class="formatua">
+                <div onclick="aldatutextuformatua('Arial')">A</div>
+                <div onclick="aldatutextuformatua('Times New Roman')">T</div>
+                <div onclick="aldatutextuformatua('Courier New')">C</div>
+                <div onclick="aldatutextuformatua('Fantasy')">F</div>
+                <div onclick="aldatutextuformatua('Monospace')">M</div>
             </div>
         </div>
     </div>
 
     <script>
-        function changeBackground(color) {
-            document.getElementById('mainContainer').style.backgroundColor = color;
+        function aldatufondoa(color) {
+            document.getElementById('kontainerra-orokorra').style.backgroundColor = color;
         }
 
-        function changeTextColor(color) {
-            document.getElementById('title').style.color = color;
-            document.getElementById('paragraph').style.color = color;
-            document.getElementById('clickText').style.color = color;
+        function aldatutextuarenkolorea(color) {
+            document.getElementById('tituloa').style.color = color;
+            document.getElementById('paragrafroa').style.color = color;
+            document.getElementById('textuaklikatu').style.color = color;
         }
 
-        function changeFont(font) {
-            document.getElementById('title').style.fontFamily = font;
-            document.getElementById('paragraph').style.fontFamily = font;
-            document.getElementById('clickText').style.fontFamily = font;
+        function aldatutextuformatua(font) {
+            document.getElementById('tituloa').style.fontFamily = font;
+            document.getElementById('paragrafroa').style.fontFamily = font;
+            document.getElementById('textuaklikatu').style.fontFamily = font;
         }
 
-        function changeFontSize(size) {
-            document.getElementById('title').style.fontSize = size;
-            document.getElementById('paragraph').style.fontSize = size;
-            document.getElementById('clickText').style.fontSize = size;
+        function aldatutextuarentamaina(size) {
+            document.getElementById('tituloa').style.fontSize = size;
+            document.getElementById('paragrafroa').style.fontSize = size;
+            document.getElementById('textuaklikatu').style.fontSize = size;
         }
     </script>
 </body>

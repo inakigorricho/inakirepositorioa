@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +9,45 @@
 <body>
     <nav>
         <ul>
-          <li><a href="pertsonalizatzea.html">Pertsonalizatzea</a></li>
-          <li><a href="formularioa.html">formularioa</a></li>
-          <li><a href="irudiak.html">Irudiak</a></li>
+            <li><a href="pertsonalizatzea.html">Pertsonalizatzea</a></li>
+            <li><a href="formularioa.html">Formularioa</a></li>
+            <li><a href="irudiak.html">Irudiak</a></li>
         </ul>
-      </nav>
-      <button onclick="aldatuargazkia()">Aldatu argazkia!</button>
-      <div>
-        <img id="argazki" src="irudiak/JavaScript-logo.png" alt="Imagen" style="width:300px;height:200px;">
-      </div>
-      <div>
-        <img id="automatiko" src="irudiak/descarga.png" alt="Imagen" style="width:300px;height:200px;">
-      </div>
+    </nav>
 
-      <script>
-        const images = ["irudiak/JavaScript-logo.png", "irudiak/descarga.png", "irudiak/CSS3_logo_and_wordmark.svg.png"];
-        let currentIndex = 0;
+    <div class="aldatu-klasea">
+        <p>Botoi magikoa: sortu eta aldatu irudiak</p>
+    </div>
+    
+    <button onclick="aldatuArgazkia()">Aldatu irudia!</button>
+    <div>
+        <img id="argazki" src="irudiak/JavaScript-logo.png" alt="Irudia" style="width:100px;height:100px;">
+    </div>
 
-        function aldatuargazkia() {
-          currentIndex = (currentIndex + 1) % images.length;
-          document.getElementById("argazki").src = images[currentIndex];
+    <div class="automatiko-klasea"> 
+        <p>Automatikoki kargatzea</p>
+    </div>
+    <div>
+        <img id="automatiko" src="irudiak/descarga.png" alt="Irudia" style="width:100px;height:100px;">
+    </div>
+
+    <script>
+        const images = ["irudiak/JavaScript-logo.png","irudiak/descarga.png","irudiak/CSS3_logo_and_wordmark.svg.png","irudiak/css_gif.gif","irudiak/js.jpg"];
+
+        let argazkiIndex = 0;
+        let automatikoIndex = 0;
+
+        function aldatuArgazkia() {
+            argazkiIndex = (argazkiIndex + 1) % images.length;
+            document.getElementById("argazki").src = images[argazkiIndex];
         }
 
-        function aldatuautomatiko() {
-          currentIndex = (currentIndex + 1) % images.length;
-          document.getElementById("automatiko").src = images[currentIndex];
+        function aldatuAutomatikoki() {
+            automatikoIndex = (automatikoIndex + 1) % images.length;
+            document.getElementById("automatiko").src = images[automatikoIndex];
         }
 
-        setInterval(aldatuautomatiko, 1000);
-      </script>
+        setInterval(aldatuAutomatikoki, 250);
+    </script>
 </body>
 </html>
