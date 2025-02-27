@@ -39,10 +39,7 @@ body {
 .kolorea .paleturquoise { background: paleturquoise; }
 .kolorea .grey { background: grey; }
 .kolorea .palegreen { background: palegreen; }
-.kolorea  { background: rgb(155, 145, 145); }
-
-
-
+.kolorea .gainsboro { background: gainsboro; }
 nav {
     background-color: #444;
     padding: 10px 0;
