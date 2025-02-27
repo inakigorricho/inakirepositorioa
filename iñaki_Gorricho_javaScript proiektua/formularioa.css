@@ -78,3 +78,13 @@ nav ul li a {
   font-size: 16px;
 }
 
+nav ul li button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 0;
+}
+nav ul li button:hover {
+background-color: #444;
+}
