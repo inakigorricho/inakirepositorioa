@@ -35,6 +35,13 @@ body {
 .kolorea .blue { background: blue; }
 .kolorea .black { background: black; }
 .kolorea .white { background: white; }
+.kolorea .pink { background: pink; }
+.kolorea .paleturquoise { background: paleturquoise; }
+.kolorea .grey { background: grey; }
+.kolorea .palegreen { background: palegreen; }
+.kolorea  { background: rgb(155, 145, 145); }
+
+
 
 nav {
     background-color: #444;
