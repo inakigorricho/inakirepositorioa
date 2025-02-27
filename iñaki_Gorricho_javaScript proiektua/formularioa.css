@@ -10,7 +10,8 @@ body {
   background: white;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px black;
+  margin-top: 5px;
 }
 
 label {
@@ -52,9 +53,7 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
-button:hover {
-  background-color: #bbb;
-}
+
 nav {
   background-color: #444;
   padding: 10px 0;
@@ -78,6 +77,12 @@ nav ul li a {
   font-size: 16px;
 }
 
+nav ul li div {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 nav ul li button {
   background: none;
   border: none;
@@ -85,6 +90,19 @@ nav ul li button {
   font-size: 16px;
   padding: 0;
 }
-nav ul li button:hover {
-background-color: #444;
+.iluna {
+  background-color: black;
+  color: #c5c5c5;
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  .formularioa {
+    background-color: #4e4e4e;
+    color: white;
+  }
+}
+#modua{
+  cursor: pointer;
 }

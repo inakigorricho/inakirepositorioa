@@ -12,7 +12,7 @@
             <li><a href="pertsonalizatzea.html">Pertsonalizatzea</a></li>
             <li><a href="formularioa.html">Formularioa</a></li>
             <li><a href="irudiak.html">Irudiak</a></li>
-            <li><button id="modua">Modua</button></li>
+            <li><div onclick="ilunmodua()" id="modua">Modua</div></li>
         </ul>
     </nav>
 
@@ -50,6 +50,15 @@
         }
 
         setInterval(aldatuAutomatikoki, 250);
+
+        function ilunmodua() {
+         document.body.className="iluna";
+         document.getElementById("modua").setAttribute("onclick","javascript: argimodua()");
+        }
+        function argimodua() {
+            document.body.className="argia";
+            document.getElementById("modua").setAttribute("onclick","javascript: ilunmodua()");
+        }
     </script>
 </body>
 </html>
