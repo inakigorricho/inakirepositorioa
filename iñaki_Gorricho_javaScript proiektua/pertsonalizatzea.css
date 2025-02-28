@@ -17,6 +17,9 @@ body {
     display: none;
     position: absolute;
 }
+.kustomizazioa :hover{
+  border-color: greenyellow;
+}
 .kolorea, .tamaina, .formatua {
     display: flex;
     gap: 5px;
