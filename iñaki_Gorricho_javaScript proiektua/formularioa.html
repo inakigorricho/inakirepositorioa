@@ -64,10 +64,12 @@
     function ilunmodua() {
          document.body.className="iluna";
          document.getElementById("modua").setAttribute("onclick","javascript: argimodua()");
+         document.getElementById("modua").innerHTML = "Iluna";
         }
         function argimodua() {
             document.body.className="argia";
             document.getElementById("modua").setAttribute("onclick","javascript: ilunmodua()");
+            document.getElementById("modua").innerHTML = "Argia";
         }
   </script>
 </body>

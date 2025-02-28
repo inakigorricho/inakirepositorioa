@@ -9,7 +9,41 @@
 <body>
     <nav>
         <ul>
-            <li><div><a href="pertsonalizatzea.html">Pertsonalizatzea</a></div></li>
+            <div>
+            <li><div onclick="menua()" id="menua">Pertsonalizatzea</div></li>
+            <div class="kustomizazioa" id="kustomizazioa">
+                <div>Atzeko kolorea</div>
+                <div class="kolorea">
+                    <div class="pink" onclick="aldatufondoa('pink')"></div>
+                    <div class="palegreen" onclick="aldatufondoa('palegreen')"></div>
+                    <div class="paleturquoise" onclick="aldatufondoa('paleturquoise')"></div>
+                    <div class="grey" onclick="aldatufondoa('grey')"></div>
+                    <div class="gainsboro" onclick="aldatufondoa('gainsboro')"></div>
+                </div>
+                <div>Aldatu letrak</div>
+                <div class="kolorea">
+                    <div class="red" onclick="aldatutextuarenkolorea('red')"></div>
+                    <div class="green" onclick="aldatutextuarenkolorea('green')"></div>
+                    <div class="blue" onclick="aldatutextuarenkolorea('blue')"></div>
+                    <div class="black" onclick="aldatutextuarenkolorea('black')"></div>
+                    <div class="white" onclick="aldatutextuarenkolorea('white')"></div>
+                </div>
+                <div class="tamaina">
+                    <div onclick="aldatutextuarentamaina('10px')">XS</div>
+                    <div onclick="aldatutextuarentamaina('14px')">S</div>
+                    <div onclick="aldatutextuarentamaina('18px')">M</div>
+                    <div onclick="aldatutextuarentamaina('22px')">L</div>
+                    <div onclick="aldatutextuarentamaina('35px')">XL</div>
+                </div>
+                <div class="formatua">
+                    <div onclick="aldatutextuformatua('Arial')">A</div>
+                    <div onclick="aldatutextuformatua('Times New Roman')">T</div>
+                    <div onclick="aldatutextuformatua('Courier New')">C</div>
+                    <div onclick="aldatutextuformatua('Fantasy')">F</div>
+                    <div onclick="aldatutextuformatua('Monospace')">M</div>
+                </div>
+            </div>
+            </div>
             <li><div><a href="formularioa.html">Formularioa</a></div></li>
             <li><div><a href="irudiak.html">Irudiak</a></div></li>
         </ul>
@@ -18,42 +52,13 @@
         <h1 id="tituloa">Ongi etorria personalizatzaileara</h1>
         <p id="paragrafoa">Paragrafo honen estiloa alda dezakezu.</p>
         <p id="textuaklikatu">Klik egin personalizatzeko.</p>
-        
-        <div class="kustomizazioa">
-            <div>Atzeko kolorea</div>
-            <div class="kolorea">
-                <div class="pink" onclick="aldatufondoa('pink')"></div>
-                <div class="palegreen" onclick="aldatufondoa('palegreen')"></div>
-                <div class="paleturquoise" onclick="aldatufondoa('paleturquoise')"></div>
-                <div class="grey" onclick="aldatufondoa('grey')"></div>
-                <div class="gainsboro" onclick="aldatufondoa('gainsboro')"></div>
-            </div>
-            <div>Aldatu letrak</div>
-            <div class="kolorea">
-                <div class="red" onclick="aldatutextuarenkolorea('red')"></div>
-                <div class="green" onclick="aldatutextuarenkolorea('green')"></div>
-                <div class="blue" onclick="aldatutextuarenkolorea('blue')"></div>
-                <div class="black" onclick="aldatutextuarenkolorea('black')"></div>
-                <div class="white" onclick="aldatutextuarenkolorea('white')"></div>
-            </div>
-            <div class="tamaina">
-                <div onclick="aldatutextuarentamaina('10px')">XS</div>
-                <div onclick="aldatutextuarentamaina('14px')">S</div>
-                <div onclick="aldatutextuarentamaina('18px')">M</div>
-                <div onclick="aldatutextuarentamaina('22px')">L</div>
-                <div onclick="aldatutextuarentamaina('35px')">XL</div>
-            </div>
-            <div class="formatua">
-                <div onclick="aldatutextuformatua('Arial')">A</div>
-                <div onclick="aldatutextuformatua('Times New Roman')">T</div>
-                <div onclick="aldatutextuformatua('Courier New')">C</div>
-                <div onclick="aldatutextuformatua('Fantasy')">F</div>
-                <div onclick="aldatutextuformatua('Monospace')">M</div>
-            </div>
-        </div>
     </div>
 
     <script>
+  function menua() {
+            var menu = document.getElementById('kustomizazioa');
+            menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'inline-block' : 'none';
+        }
         function aldatufondoa(color) {
             document.getElementById('kontainerra-orokorra').style.backgroundColor = color;
         }
